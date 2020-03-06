@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { RestService } from '../rest.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 import { API_URL } from 'src/environments/environment';
 
@@ -11,7 +12,7 @@ import { API_URL } from 'src/environments/environment';
 export class PostComponent implements OnInit {
   @Input() post;
   comments: any;
-  constructor(private rest: RestService) { 
+  constructor(private rest: RestService, private _snackBar: MatSnackBar) { 
   
   }
 
@@ -36,6 +37,9 @@ export class PostComponent implements OnInit {
 
   // function to show the post's URL
   openSnackBar(){
+    this._snackBar.open(API_URL+'posts/'+this.post.id, 'copy', {
+      duration: 4000,
+    });
     console.log(API_URL+'posts/'+this.post.id);
     
   }

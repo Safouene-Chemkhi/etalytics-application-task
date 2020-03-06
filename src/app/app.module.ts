@@ -13,6 +13,7 @@ import { RestService } from './rest.service';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [RestService],
   bootstrap: [AppComponent]
