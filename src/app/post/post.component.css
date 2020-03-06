@@ -1,0 +1,22 @@
+
+.post-card {
+    background-color: white;
+  }
+
+.comment-card{
+  background-color: whitesmoke;
+}
+
+.flex-container {
+    display: flex;
+  }  
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+.example-full-width {
+    width: 100%;
+  }
