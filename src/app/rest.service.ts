@@ -25,7 +25,8 @@ export class RestService {
     return this.http.patch(API_URL+'posts/'+post_id, comments);
   }
 
-  get_user(user_id){
+  //################  fetch user by id from endpoint #################
+  get_user_by_id(user_id){
     return this.http.get(API_URL+'users/'+user_id);
   }
 

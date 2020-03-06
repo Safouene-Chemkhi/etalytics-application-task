@@ -9,6 +9,7 @@ import { RestService } from '../rest.service';
 export class HomeComponent implements OnInit {
   public posts;
   constructor(public rest: RestService) {
+    // Get all posts from the endpoint
     rest.get_posts().subscribe(res => {
       this.posts = res;
     })
