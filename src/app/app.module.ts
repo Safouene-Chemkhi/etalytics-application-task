@@ -14,6 +14,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     ]),
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     MatCardModule,
     MatInputModule,
     MatButtonModule,
