@@ -27,10 +27,12 @@ export class PostComponent implements OnInit {
 
   // Function to post a new comment
   post_comment(comment){
+    console.log("submet comment");
+    
     this.comments.push({
       name:"default user",
       email:"default.user@email.com",
-      body:comment
+      body:comment.value
     })
     this.rest.post_comment(this.post.id, this.comments);
   }

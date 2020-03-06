@@ -30,7 +30,7 @@
                   <mat-label>Leave a comment</mat-label>
                   <textarea matInput placeholder="Type here..." id="Comment" #comment></textarea>
                 </mat-form-field>
-                <button mat-raised-button color="primary">Submit</button>
+                <button mat-raised-button color="primary" (click)="$event.stopPropagation()" >Submit</button>
               </form>
             </div>
           </div>
