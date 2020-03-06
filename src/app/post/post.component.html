@@ -1,6 +1,7 @@
 <mat-card class="post-card">
         <mat-card-header>
           <mat-card-title>{{post.title}}</mat-card-title>
+          <mat-card-subtitle>{{user.name}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <p>
@@ -24,15 +25,16 @@
               </div>
             </div>
             <div style="width: 30%;">
-              <form class="example-form">
+              <form class="example-form" (submit)="post_comment(comment)">
                 <mat-form-field class="example-full-width">
                   <mat-label>Leave a comment</mat-label>
-                  <textarea matInput placeholder="Type here..."></textarea>
+                  <textarea matInput placeholder="Type here..." id="Comment" #comment></textarea>
                 </mat-form-field>
+                <button mat-raised-button color="primary">Submit</button>
               </form>
             </div>
           </div>
-    
+          <button mat-stroked-button (click)="openSnackBar()">Show post URL</button>
         </mat-card-content>
       </mat-card>
 

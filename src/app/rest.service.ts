@@ -21,8 +21,12 @@ export class RestService {
   }  
 
   //################  Post a comment #################
-  post_comment(comment){
-    return this.http.post(API_URL+'posts', comment);
+  post_comment(post_id, comments){
+    return this.http.patch(API_URL+'posts/'+post_id, comments);
+  }
+
+  get_user(user_id){
+    return this.http.get(API_URL+'users/'+user_id);
   }
 
 }

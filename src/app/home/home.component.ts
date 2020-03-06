@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RestService } from '../rest.service';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,6 @@ export class HomeComponent implements OnInit {
   constructor(public rest: RestService) {
     rest.get_posts().subscribe(res => {
       this.posts = res;
-      console.log(res);
     })
   }
 

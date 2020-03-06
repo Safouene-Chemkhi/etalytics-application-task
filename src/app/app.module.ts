@@ -4,13 +4,16 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { PostComponent } from './post/post.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
-import { PostComponent } from './post/post.component';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { PostComponent } from './post/post.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule,
   ],
   providers: [RestService],
   bootstrap: [AppComponent]
